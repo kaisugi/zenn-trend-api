@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "strict": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "noImplicitAny": false,
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src/lambda/*.ts",
+    "src/lambda/*.tsx"
+  ]
+}

@@ -1,0 +1,12 @@
+[build]
+  command = "yarn build"
+  publish = "dist/client"
+  functions = "dist/server"
+
+[[redirects]]
+  from = "/trend.json"
+  to = "/.netlify/functions/trend"
+
+[[redirects]]
+  from = "/trend"
+  to = "/"
