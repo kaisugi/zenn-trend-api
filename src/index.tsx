@@ -46,7 +46,7 @@ const Trend = () => {
       setBookData(res.data)
     }
     f()
-  })
+  }, [])
 
   const renderTrends = (data) => {
     if (data === undefined) {
