@@ -22,6 +22,8 @@ export default async function handler(
 ) {
   const url = 'https://zenn.dev/'
 
+  res.setHeader('Access-Control-Allow-Origin', '*')
+
   await axios
     .get(url)
     .then(({ data }) => {
