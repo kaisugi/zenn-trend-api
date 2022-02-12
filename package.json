@@ -1,31 +1,24 @@
 {
-  "name": "zenn-trend-api",
-  "version": "1.0.0",
-  "license": "MIT",
+  "name": "next-template",
+  "private": true,
   "scripts": {
-    "build": "yarn build:client && yarn build:server",
-    "build:client": "webpack --mode production --config webpack.config.js",
-    "build:server": "netlify-lambda build src/lambda"
-  },
-  "devDependencies": {
-    "@babel/preset-typescript": "^7.7.7",
-    "@types/cheerio": "^0.22.15",
-    "@types/node": "^13.1.1",
-    "@types/react": "^16.9.17",
-    "css-loader": "^3.4.0",
-    "file-loader": "^5.0.2",
-    "html-webpack-plugin": "^3.2.0",
-    "netlify-lambda": "^1.6.3",
-    "style-loader": "^1.1.2",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.7.4",
-    "webpack-cli": "^3.3.10"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "axios": "^0.21.2",
-    "cheerio": "^1.0.0-rc.3",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2"
+    "axios": "^0.25.0",
+    "cheerio": "^1.0.0-rc.10",
+    "next": "12.0.10",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.17",
+    "@types/react": "17.0.39",
+    "eslint": "8.9.0",
+    "eslint-config-next": "12.0.10",
+    "typescript": "4.5.5"
   }
 }

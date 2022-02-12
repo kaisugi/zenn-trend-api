@@ -1,3 +1,5 @@
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import type { NextApiRequest, NextApiResponse } from 'next'
 import axios from 'axios'
 import cheerio from 'cheerio'
 
@@ -10,25 +12,19 @@ const fetchTrend = (html: string) => {
   return rawData
 }
 
-export const handler = async () => {
+type Data = {
+  body: string
+}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
   const url = 'https://zenn.dev/'
 
-  return await axios
+  await axios
     .get(url)
     .then(({ data }) => {
-      return {
-        statusCode: 200,
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/json; charset=utf-8'
-        },
-        body: JSON.stringify(fetchTrend(data)),
-      }
-    })
-    .catch(err => {
-      return {
-        statusCode: 500,
-        body: err,
-      }
+      res.status(200).json(fetchTrend(data))
     })
 }
