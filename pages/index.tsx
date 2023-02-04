@@ -21,8 +21,8 @@ const Home: NextPage = () => {
         <Link href="/api/trendBook">トレンド（books）一覧（JSON）</Link><br/>
         <Link href="/trend">トレンド記事一覧（テキスト）</Link></p>
         <p>Zenn 側の仕様変更などにより、予告なくサービスを終了する場合があります。<br/>
-        何かありましたら <a href="https://github.com/HelloRusk/zenn-trend-api/issues">Issue</a> にてお願いいたします。</p>
-        <p>@ 2022 HelloRusk</p>
+        何かありましたら <a href="https://github.com/kaisugi/zenn-trend-api/issues">Issue</a> にてお願いいたします。</p>
+        <p>@ 2023 Kaito Sugimoto</p>
       </div>
     </div>
   )
